@@ -8,14 +8,14 @@ const equal = document.getElementById("key");
 function doCalculation() {
     if (input.value.includes("sin")) {
         const num = input.value.replace("sin", "");
-        results.innerHTML = Math.sin(num * Math.PI / 180);
+        results.innerHTML = Math.sin(num * Math.PI / 180).toFixed(5);
     } else if (input.value.includes("cos")) {
         const num = input.value.replace("cos", "");
 
-        results.innerHTML = Math.cos(num * Math.PI / 180);
+        results.innerHTML = Math.cos(num * Math.PI / 180).toFixed(5);
     } else if (input.value.includes("tan")) {
         const num = input.value.replace("tan", "");
-        results.innerHTML = Math.tan(num * Math.PI / 180);
+        results.innerHTML = Math.tan(num * Math.PI / 180).toFixed(5);
     } else {
         results.innerHTML = eval(input.value);
     }
