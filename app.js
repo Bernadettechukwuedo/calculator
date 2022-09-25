@@ -25,6 +25,12 @@ function doCalculation() {
     } else if (input.value.includes("^")) {
         const num = input.value.replace("^", "**");
         results.innerHTML = eval(num);
+    } else if (input.value.includes("X")) {
+        const num = input.value.replace("X", "*");
+        results.innerHTML = eval(num);
+    } else if (input.value.includes("÷")) {
+        const num = input.value.replace("÷", "/");
+        results.innerHTML = eval(num);
     } else {
         results.innerHTML = eval(input.value);
     }
