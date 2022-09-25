@@ -16,10 +16,24 @@ function doCalculation() {
     } else if (input.value.includes("tan")) {
         const num = input.value.replace("tan", "");
         results.innerHTML = Math.tan(num * Math.PI / 180).toFixed(5);
+    } else if (input.value.includes("√")) {
+        const num = input.value.replace("√", "");
+        results.innerHTML = Math.sqrt(num);
+    } else if (input.value.includes("²")) {
+        const num = input.value.replace("²", "");
+        results.innerHTML = Math.pow(num, 2);
+    } else if (input.value.includes("∛")) {
+        const num = input.value.replace("∛", "");
+        results.innerHTML = Math.cbrt(num);
+    } else if (input.value.includes("³")) {
+        const num = input.value.replace("³", "");
+        const cube = num * num * num
+        results.innerHTML = cube;
     } else {
         results.innerHTML = eval(input.value);
     }
 }
+
 equal.addEventListener("click", doCalculation);
 
 
