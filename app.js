@@ -25,10 +25,9 @@ function doCalculation() {
     } else if (input.value.includes("∛")) {
         const num = input.value.replace("∛", "");
         results.innerHTML = Math.cbrt(num);
-    } else if (input.value.includes("³")) {
-        const num = input.value.replace("³", "");
-        const cube = num * num * num
-        results.innerHTML = cube;
+    } else if (input.value.includes("^")) {
+        const num = input.value.replace("^", "**");
+        results.innerHTML = eval(num);
     } else {
         results.innerHTML = eval(input.value);
     }
