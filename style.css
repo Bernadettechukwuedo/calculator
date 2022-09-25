@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+    background-color: black;
+  }
+  h1{
+    color: white;
+  }
+.container{
+    background-color: blue;
+    width: 300px;
+    height: auto;
+}
+.results{
+    margin: 10px;
+    font-size: 20px;
+    margin: 10px;
+    width: 70%;
+    height: 50px;
+    padding: 5px;
+    background-color:black;
+    color:white
+}
+
+.on,.clear,.keys{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+#key{
+    width: 90%;
+    height: 50px;
+    margin: 10px;
+}
+.input{
+    margin: 10px;
+    width: 80%;
+    height: 70px;
+    padding: 0;
+    background-color:black;
+    color:white;
+    font-size: 30px;
+}
+.on:hover{
+    background-color: red;
+}
+
+.clear:hover{
+    background-color: red;
+}
+#key:hover{
+  background-color: red;
+}
