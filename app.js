@@ -30,6 +30,7 @@ for (let i = 0; i < options.length; i++) {
 }
 
 function clearInput() {
+
     input.value = "";
     results.innerHTML = "0";
 }
@@ -37,7 +38,15 @@ function clearInput() {
 button.addEventListener("click", clearInput);
 
 function deleteInput() {
-    input.value = input.value.slice(0, -1);
-
+    if (input.value.includes("sin")) {
+        input.value = input.value.slice(0, 0);
+    } else if (input.value.includes("tan")) {
+        input.value = input.value.slice(0, 0);
+    } else if (input.value.includes("cos")) {
+        input.value = input.value.slice(0, 0);
+    } else {
+        input.value = input.value.slice(0, -1);
+    }
 }
+
 del.addEventListener("click", deleteInput);
