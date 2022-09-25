@@ -19,9 +19,6 @@ function doCalculation() {
     } else if (input.value.includes("√")) {
         const num = input.value.replace("√", "");
         results.innerHTML = Math.sqrt(num);
-    } else if (input.value.includes("²")) {
-        const num = input.value.replace("²", "");
-        results.innerHTML = Math.pow(num, 2);
     } else if (input.value.includes("∛")) {
         const num = input.value.replace("∛", "");
         results.innerHTML = Math.cbrt(num);
