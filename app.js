@@ -11,7 +11,6 @@ function doCalculation() {
         results.innerHTML = Math.sin(num * Math.PI / 180).toFixed(5);
     } else if (input.value.includes("cos")) {
         const num = input.value.replace("cos", "");
-
         results.innerHTML = Math.cos(num * Math.PI / 180).toFixed(5);
     } else if (input.value.includes("tan")) {
         const num = input.value.replace("tan", "");
@@ -23,13 +22,12 @@ function doCalculation() {
         const num = input.value.replace("∛", "");
         results.innerHTML = Math.cbrt(num);
     } else if (input.value.includes("^")) {
-        const num = input.value.replace("^", "**");
+        const num = input.value.replaceAll("^", "**");
         results.innerHTML = eval(num);
-    } else if (input.value.includes("X")) {
-        const num = input.value.replace("X", "*");
-        results.innerHTML = eval(num);
+
     } else if (input.value.includes("÷")) {
-        const num = input.value.replace("÷", "/");
+        const num = input.value.replaceAll("÷", "/");
+        console.log(num)
         results.innerHTML = eval(num);
     } else {
         results.innerHTML = eval(input.value);
@@ -37,7 +35,6 @@ function doCalculation() {
 }
 
 equal.addEventListener("click", doCalculation);
-
 
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", (e) => {
